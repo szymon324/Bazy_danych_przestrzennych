@@ -1,0 +1,472 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command line to run this workspace:
+#        "C:\Program Files\FME\fme.exe" D:\Bazy_danych_przestrzennych\none2none.fmw
+#          --File "C:\Users\szymo\T2018_KAR_BUILDINGS.zip"
+#          --Nazwa_pliku_mapBox "NowyPlik"
+#          --FME_LAUNCH_VIEWER_APP "YES"
+#    
+#!   A0_PREVIEW_IMAGE="data:image/png;base64,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"
+#!   ARCGIS_COMPATIBILITY="ARCGIS_AUTO"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON="import&lt;space&gt;rasterio"
+#!   BEGIN_TCL=""
+#!   CATEGORY=""
+#!   DESCRIPTION=""
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="3015.78 218.655"
+#!   DOC_TOP_LEFT="184.377 -1231.17"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="22630"
+#!   FME_BULK_MODE_THRESHOLD="2000"
+#!   FME_DOCUMENT_GUID="4a181c35-36a9-4545-8de3-ec64d10187a1"
+#!   FME_DOCUMENT_PRIORGUID="15d2c640-cd24-4406-8a32-ef12ccd6110a,12965296-ae30-452f-b3df-bf8a387e6801,f88a4340-0def-43f9-b108-58907b6f0b58"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_NAMES_ENCODING="UTF-8"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY=""
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2022.1.3.0 (20220928 - Build 22630 - WIN64)"
+#!   LAST_SAVE_DATE="2023-01-20T23:15:44"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="39"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SAVE_ON_PROMPT_AND_RUN="Yes"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="YES"
+#!   TITLE=""
+#!   USAGE=""
+#!   USE_MARKDOWN=""
+#!   VIEW_POSITION="16.5931 -389.938"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="113"
+#! >
+#! <DATASETS>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILENAME_MUSTEXIST_OR_ATTR File &quot;&quot; Select a File"
+#!   DEFAULT_VALUE="C:\Users\szymo\T2018_KAR_BUILDINGS.zip"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING_OR_ATTR Nazwa_pliku_mapBox Enter Text Data"
+#!   DEFAULT_VALUE="NowyPlik"
+#!   IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <USER_PARAMETERS
+#!   FORM="eyJwYXJhbWV0ZXJzIjpbeyJhY2Nlc3NNb2RlIjoicmVhZCIsImRlZmF1bHRWYWx1ZSI6IkM6XFxVc2Vyc1xcc3p5bW9cXFQyMDE4X0tBUl9CVUlMRElOR1MuemlwIiwiaXRlbXNUb1NlbGVjdCI6ImZpbGVzIiwibmFtZSI6IkZpbGUiLCJwcm9tcHQiOiJTZWxlY3QgYSBGaWxlIiwicmVxdWlyZWQiOnRydWUsInNlbGVjdE11bHRpcGxlIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJmaWxlIiwidmFsaWRhdGVFeGlzdGVuY2UiOnRydWUsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZGVmYXVsdFZhbHVlIjoiTm93eVBsaWsiLCJuYW1lIjoiTmF6d2FfcGxpa3VfbWFwQm94IiwicHJvbXB0IjoiRW50ZXIgVGV4dCBEYXRhIiwicmVxdWlyZWQiOnRydWUsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn1dfQ=="
+#! >
+#! <PARAMETER_INFO>
+#!     <INFO NAME="File" 
+#!   DEFAULT_VALUE="C:\Users\szymo\T2018_KAR_BUILDINGS.zip"
+#!   SCOPE="STAND_ALONE"
+#!   GENERATED_GUI_LINE="true"
+#!   GUI_LINE="GUI FILENAME_MUSTEXIST_OR_ATTR File &quot;&quot; Select a File"
+#! />
+#!     <INFO NAME="Nazwa_pliku_mapBox" 
+#!   DEFAULT_VALUE="NowyPlik"
+#!   SCOPE="STAND_ALONE"
+#!   GENERATED_GUI_LINE="true"
+#!   GUI_LINE="GUI STRING_OR_ATTR Nazwa_pliku_mapBox Enter Text Data"
+#! />
+#! </PARAMETER_INFO>
+#! </USER_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="2"
+#!   TYPE="HTTPCaller"
+#!   VERSION="6"
+#!   POSITION="834.38334383343818 -1012.5101251012507"
+#!   BOUNDING_RECT="834.38334383343818 -1012.5101251012507 454 71"
+#!   ORDER="500000000000018"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="22630"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_error" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ADDITIONAL_PARAMETERS_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="ADDITIONAL_URL_PARAMETERS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ADVANCED_REQUEST_PARAMETERS" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_METHOD" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_NAMED_CONNECTION" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_PASSWORD" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_USERNAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="CONCURRENCY_GROUP" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="CONNECTION_TIMEOUT_LENGTH" PARM_VALUE="60"/>
+#!     <XFORM_PARM PARM_NAME="CUSTOM_HEADERS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CUSTOM_HEADERS_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="ERROR_ATTR" PARM_VALUE="_error"/>
+#!     <XFORM_PARM PARM_NAME="FILE_PATH_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FILE_PATH_ATTR2" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FILE_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FOLLOW_REDIRECTS" PARM_VALUE="FOLLOW_WITH_GET"/>
+#!     <XFORM_PARM PARM_NAME="HTTPURL_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="HTTP_AUTH_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="HTTP_METHOD" PARM_VALUE="POST"/>
+#!     <XFORM_PARM PARM_NAME="HTTP_RESPONSE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="LOOP_MESSAGE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MAX_HTTP_VERSION" PARM_VALUE="HTTP_2"/>
+#!     <XFORM_PARM PARM_NAME="MAX_TRANSFERS_IN_PROGRESS" PARM_VALUE="25"/>
+#!     <XFORM_PARM PARM_NAME="MINIMUM_ENCRYPTION_LEVEL" PARM_VALUE="OS_DEFAULT"/>
+#!     <XFORM_PARM PARM_NAME="MULTIPARTS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MULTIPART_GROUP" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MULTIPART_RESPONSE_GROUP" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="MULTIPART_RESPONSE_HEADER_LIST_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_DIRNAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_FILENAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RATE_LIMIT_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="RATE_LIMIT_INTERVAL_IN_SECONDS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RATE_LIMIT_MAX_REQUESTS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RATE_LIMIT_REQUEST_TIMING" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="REDIRECT_AUTH" PARM_VALUE="ORIGINAL_DOMAIN_ONLY"/>
+#!     <XFORM_PARM PARM_NAME="RESPONSE_ATTRS_GROUP" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="RESPONSE_ATTR_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RESPONSE_DIR_GROUP" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RESPONSE_FILE_GROUP" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RESPONSE_HEADER_LIST_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RESPONSE_TYPE" PARM_VALUE="Attribute"/>
+#!     <XFORM_PARM PARM_NAME="RETRY_FAILED_TRANSFERS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RETRY_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="RETRY_INITIAL_BACKOFF" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RETRY_MAX_RETRIES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="SPLIT_MULTIPART_DOWNLOADS" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="STATUS_CODE_ATTR" PARM_VALUE="_http_status_code"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_ATTR" PARM_VALUE="_response_body"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_ATTR_ENCODING" PARM_VALUE="auto-detect"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_URL" PARM_VALUE="https:&lt;solidus&gt;&lt;solidus&gt;api.mapbox.com&lt;solidus&gt;uploads&lt;solidus&gt;v1&lt;solidus&gt;szymonagh&lt;solidus&gt;credentials?access_token=sk.eyJ1Ijoic3p5bW9uYWdoIiwiYSI6ImNsZDUydjJxMTAxYTEzdXFocm9hOThwbnQifQ.G9G6P6qH8u6_0jNKeKmKrw"/>
+#!     <XFORM_PARM PARM_NAME="TLS_PARAMETERS" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFER_TIMEOUT_LENGTH" PARM_VALUE="90"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_BODY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_CONTENT_TYPE" PARM_VALUE="Text (text/plain)"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_FILE" PARM_VALUE="$(File)"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_TYPE" PARM_VALUE="Upload From File"/>
+#!     <XFORM_PARM PARM_NAME="USE_COOKIES" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="VERIFY_SSL_CERTIFICATES" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="HTTPCaller"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="3"
+#!   TYPE="Creator"
+#!   VERSION="6"
+#!   POSITION="184.37684376843742 -1012.5101251012507"
+#!   BOUNDING_RECT="184.37684376843742 -1012.5101251012507 430 71"
+#!   ORDER="500000000000020"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="22630"
+#! >
+#!     <OUTPUT_FEAT NAME="CREATED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATEND" PARM_VALUE="no"/>
+#!     <XFORM_PARM PARM_NAME="COORDS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CRE_ATTR" PARM_VALUE="_creation_instance"/>
+#!     <XFORM_PARM PARM_NAME="GEOM" PARM_VALUE="&lt;lt&gt;?xml&lt;space&gt;version=&lt;quote&gt;1.0&lt;quote&gt;&lt;space&gt;encoding=&lt;quote&gt;US_ASCII&lt;quote&gt;&lt;space&gt;standalone=&lt;quote&gt;no&lt;quote&gt;&lt;space&gt;?&lt;gt&gt;&lt;lt&gt;geometry&lt;space&gt;dimension=&lt;quote&gt;2&lt;quote&gt;&lt;gt&gt;&lt;lt&gt;null&lt;solidus&gt;&lt;gt&gt;&lt;lt&gt;&lt;solidus&gt;geometry&lt;gt&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GEOMTYPE" PARM_VALUE="Geometry Object"/>
+#!     <XFORM_PARM PARM_NAME="NUM" PARM_VALUE="1"/>
+#!     <XFORM_PARM PARM_NAME="OAN_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Creator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="16"
+#!   TYPE="SystemCaller"
+#!   VERSION="3"
+#!   POSITION="2084.327793660756 -1100.165268909326"
+#!   BOUNDING_RECT="2084.327793660756 -1100.165268909326 454 71"
+#!   ORDER="500000000000031"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="22630"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="send" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CMD" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;send&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="OAN_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SystemCaller"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="10"
+#!   TYPE="AttributeCreator"
+#!   VERSION="9"
+#!   POSITION="1407.6468198310299 -1072.5101251012507"
+#!   BOUNDING_RECT="1407.6468198310299 -1072.5101251012507 454 71"
+#!   ORDER="500000000000034"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="22630"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="send" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; send SET_TO curl&lt;space&gt;-X&lt;space&gt;POST&lt;space&gt;-H&lt;space&gt;&lt;quote&gt;Content-Type:&lt;space&gt;application&lt;solidus&gt;json&lt;quote&gt;&lt;space&gt;-H&lt;space&gt;&lt;quote&gt;Cache-Control:&lt;space&gt;no-cache&lt;quote&gt;&lt;space&gt;-d&lt;space&gt;&lt;quote&gt;&lt;opencurly&gt;&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;url&lt;backslash&gt;&lt;quote&gt;:&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;http:&lt;solidus&gt;&lt;solidus&gt;tilestream-tilesets-production.s3.amazonaws.com&lt;solidus&gt;60&lt;solidus&gt;_pending&lt;solidus&gt;9ck2r4pf6p72rr91kduzv4dlc&lt;solidus&gt;szymonagh&lt;backslash&gt;&lt;quote&gt;&lt;comma&gt;&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;tileset&lt;backslash&gt;&lt;quote&gt;:&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;szymonagh.traverse-bay&lt;backslash&gt;&lt;quote&gt;&lt;comma&gt;&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;name&lt;backslash&gt;&lt;quote&gt;:&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;$(Nazwa_pliku_mapBox)&lt;backslash&gt;&lt;quote&gt;&lt;closecurly&gt;&lt;quote&gt;&lt;space&gt;https:&lt;solidus&gt;&lt;solidus&gt;api.mapbox.com&lt;solidus&gt;uploads&lt;solidus&gt;v1&lt;solidus&gt;szymonagh?access_token=sk.eyJ1Ijoic3p5bW9uYWdoIiwiYSI6ImNsZDUydjJxMTAxYTEzdXFocm9hOThwbnQifQ.G9G6P6qH8u6_0jNKeKmKrw"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="17"
+#!   TYPE="Inspector"
+#!   VERSION="5"
+#!   POSITION="2746.1557801418721 -1160.165268909326"
+#!   BOUNDING_RECT="2746.1557801418721 -1160.165268909326 454 71"
+#!   ORDER="500000000000035"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="22630"
+#! >
+#!     <XFORM_PARM PARM_NAME="AREA_COLOR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="PEN_COLOR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="POINTCLOUD_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_NUM_COLS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_NUM_ROWS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_START_COL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_START_ROW" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_VISUALIZATION_OPTION" PARM_VALUE="No Reduction"/>
+#!     <XFORM_PARM PARM_NAME="TACKATTRS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="THINNER_INTERVAL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="THINNER_MAX_NUM_POINTS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="THINNER_TYPE_DISPLAY" PARM_VALUE="No Thinning"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VECTOR_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Inspector"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="9"
+#!   SOURCE_NODE="3"
+#!   TARGET_NODE="2"
+#!   SOURCE_PORT_DESC="fo 0 CREATED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="12"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="10"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="11"
+#!   SOURCE_NODE="10"
+#!   TARGET_NODE="16"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="18"
+#!   SOURCE_NODE="16"
+#!   TARGET_NODE="17"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+
+FME_PYTHON_VERSION 39
+ARCGIS_COMPATIBILITY ARCGIS_AUTO
+# ============================================================================
+DEFAULT_MACRO File C:\Users\szymo\T2018_KAR_BUILDINGS.zip
+
+DEFAULT_MACRO Nazwa_pliku_mapBox NowyPlik
+
+# ============================================================================
+INCLUDE [ if {{$(File$encode)} == {}} { puts_real {Parameter 'File' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(Nazwa_pliku_mapBox$encode)} == {}} { puts_real {Parameter 'Nazwa_pliku_mapBox' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+WRITER_TYPE NULL
+WRITER_KEYWORD NULL_DEST
+NULL_DEST_DATASET null
+#! END_WB_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)none2none.log"
+LOG_APPEND NO
+LOG_FILTER_MASK -1
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+FME_NAMES_ENCODING UTF-8
+FME_BULK_MODE_THRESHOLD 2000
+LAST_SAVE_BUILD "FME 2022.1.3.0 (20220928 - Build 22630 - WIN64)"
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+FME_BEGIN_PYTHON_ENC import<space>rasterio
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME none2none
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+Tcl2 proc Creator_CoordSysRemover {} {   global FME_CoordSys;   set FME_CoordSys {}; }
+MACRO Creator_XML     NOT_ACTIVATED
+MACRO Creator_CLASSIC NOT_ACTIVATED
+MACRO Creator_2D3D    2D_GEOMETRY
+MACRO Creator_COORDS  <Unused>
+INCLUDE [ if { {Geometry Object} == {Geometry Object} } {            puts {MACRO Creator_XML *} } ]
+INCLUDE [ if { {Geometry Object} == {2D Coordinate List} } {            puts {MACRO Creator_2D3D 2D_GEOMETRY};            puts {MACRO Creator_CLASSIC *} } ]
+INCLUDE [ if { {Geometry Object} == {3D Coordinate List} } {            puts {MACRO Creator_2D3D 3D_GEOMETRY};            puts {MACRO Creator_CLASSIC *} } ]
+INCLUDE [ if { {Geometry Object} == {2D Min/Max Box} } {            set comment {                We need to turn the COORDS which are                    minX minY maxX maxY                into a full polygon list of coordinates            };            set splitCoords [split [string trim {<Unused>}]];            if { [llength $splitCoords] > 4} {               set trimmedCoords {};               foreach item $splitCoords { if { $item != {} } {lappend trimmedCoords $item} };               set splitCoords $trimmedCoords;            };            if { [llength $splitCoords] != 4 } {                error {Creator: Coordinate list is expected to be a space delimited list of four numbers as 'minx miny maxx maxy' - `<Unused>' is invalid};            };            set minX [lindex $splitCoords 0];            set minY [lindex $splitCoords 1];            set maxX [lindex $splitCoords 2];            set maxY [lindex $splitCoords 3];            puts "MACRO Creator_COORDS $minX $minY $minX $maxY $maxX $maxY $maxX $minY $minX $minY";            puts {MACRO Creator_2D3D 2D_GEOMETRY};            puts {MACRO Creator_CLASSIC *} } ]
+FACTORY_DEF {$(Creator_XML)} CreationFactory    FACTORY_NAME { Creator_XML_Creator }    CREATE_AT_END { no }    OUTPUT { FEATURE_TYPE _____CREATED______        @Geometry(FROM_ENCODED_STRING,<lt>?xml<space>version=<quote>1.0<quote><space>encoding=<quote>US_ASCII<quote><space>standalone=<quote>no<quote><space>?<gt><lt>geometry<space>dimension=<quote>2<quote><gt><lt>null<solidus><gt><lt><solidus>geometry<gt>) }
+FACTORY_DEF {$(Creator_CLASSIC)} CreationFactory    FACTORY_NAME { Creator_CLASSIC_Creator }    $(Creator_2D3D) { $(Creator_COORDS) }    CREATE_AT_END { no }    OUTPUT { FEATURE_TYPE _____CREATED______ }
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME { Creator_Cloner }    INPUT FEATURE_TYPE _____CREATED______        @Tcl2(Creator_CoordSysRemover)        @CoordSys()    NUMBER_OF_COPIES { 1 }    COPY_NUMBER_ATTRIBUTE { "_creation_instance" }    OUTPUT { FEATURE_TYPE Creator_CREATED        fme_feature_type Creator         }
+FACTORY_DEF * BranchingFactory   FACTORY_NAME "Creator_CREATED Brancher -1 9"   INPUT FEATURE_TYPE Creator_CREATED   TARGET_FACTORY "$(WB_CURRENT_CONTEXT)_CREATOR_BRANCH_TARGET"   MAXIMUM_COUNT None   OUTPUT PASSED FEATURE_TYPE *
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(WB_CURRENT_CONTEXT)_CREATOR_BRANCH_TARGET"   INPUT FEATURE_TYPE *  OUTPUT FEATURE_TYPE *
+# -------------------------------------------------------------------------
+# Combine the two "file path attribute" parameters into one value.
+DEFAULT_MACRO HTTPCaller_FILE_PATH_ATTR
+INCLUDE [ 	if { {<Unused>} == {<Unused>} } { 		puts {MACRO HTTPCaller_FILE_PATH_ATTR "<Unused>"}; 	} else { 		puts {MACRO HTTPCaller_FILE_PATH_ATTR "<Unused>"}; 	} ]
+FACTORY_DEF {*} HTTPFactory    FACTORY_NAME { HTTPCaller }       INPUT  FEATURE_TYPE Creator_CREATED    TARGET_URL { "https:<solidus><solidus>api.mapbox.com<solidus>uploads<solidus>v1<solidus>szymonagh<solidus>credentials?access_token=sk.eyJ1Ijoic3p5bW9uYWdoIiwiYSI6ImNsZDUydjJxMTAxYTEzdXFocm9hOThwbnQifQ.G9G6P6qH8u6_0jNKeKmKrw" }    HTTP_METHOD { POST }    SAVE_FILE { NO }    OUTPUT_FILENAME { "<Unused>" }    OUTPUT_DIRECTORY { "<Unused>" }    FILE_EXTENSION { "<Unused>" }    TARGET_ATTR { "_response_body" }    FILE_PATH_ATTR { $(HTTPCaller_FILE_PATH_ATTR) }    UPLOAD_FILE { "@EvaluateExpression(FDIV,STRING_ENCODED,$(File$encode),HTTPCaller)" }    UPLOAD_BODY { "<Unused>" }    MULTIPART_UPLOAD { NO }    UPLOAD_CONTENT_TYPE { "text/plain" }    COMBINED_MULTIPART_TABLE {  }    REQUEST_HEADER_TABLE {  }    ADDITIONAL_URL_PARAMETERS {  }    AUTH_USERNAME { "<Unused>" }    AUTH_PASSWORD { "<Unused>" }    AUTH_METHOD { "<Unused>" }    TARGET_ATTRIBUTE_ENCODING { auto-detect }    RESPONSE_HEADER_LIST_ATTR { "" }    STATUS_CODE_ATTR { "_http_status_code" }    ERROR_ATTR { "_error" }    CONNECTION_TIMEOUT_LENGTH { 60 }    TRANSFER_TIMEOUT_LENGTH { 90 }    FOLLOW_REDIRECTS { FOLLOW_WITH_GET }    REDIRECT_AUTH { ORIGINAL_DOMAIN_ONLY }    VERIFY_SSL_CERTIFICATES { Yes }    NAMED_CONNECTION { "<Unused>" }    USE_COOKIES { No }    MAX_TRANSFERS_IN_PROGRESS { 25 }    MAX_HTTP_VERSION { HTTP_2 }    RATE_LIMIT_MAX_REQUESTS { <Unused> }    RATE_LIMIT_INTERVAL_IN_SECONDS { <Unused> }    RATE_LIMIT_REQUEST_TIMING { <Unused> }    RETRY_FAILED_TRANSFERS { <Unused> }    RETRY_MAX_RETRIES { <Unused> }    RETRY_INITIAL_BACKOFF { <Unused> }    SPLIT_MULTIPART_RESPONSE { NO }    MULTIPART_RESPONSE_HEADER_LIST_ATTR { "<Unused>" }    MINIMUM_ENCRYPTION_LEVEL { "OS_DEFAULT" }    OUTPUT { OUTPUT FEATURE_TYPE HTTPCaller_Output          }    OUTPUT { REJECTED FEATURE_TYPE HTTPCaller_<REJECTED>          }
+DEFAULT_MACRO _WB_BYPASS_TERMINATION No
+FACTORY_DEF * TeeFactory FACTORY_NAME HTTPCaller_<Rejected> INPUT FEATURE_TYPE HTTPCaller_<REJECTED>  NO_LOGGING   OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, HTTPCaller<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME { AttributeCreator }    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE HTTPCaller_Output    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ATTR_ACTION { "" "send" "SET_TO" "curl<space>-X<space>POST<space>-H<space><quote>Content-Type:<space>application<solidus>json<quote><space>-H<space><quote>Cache-Control:<space>no-cache<quote><space>-d<space><quote><opencurly><space><backslash><quote>url<backslash><quote>:<space><backslash><quote>http:<solidus><solidus>tilestream-tilesets-production.s3.amazonaws.com<solidus>60<solidus>_pending<solidus>9ck2r4pf6p72rr91kduzv4dlc<solidus>szymonagh<backslash><quote><comma><space><backslash><quote>tileset<backslash><quote>:<space><backslash><quote>szymonagh.traverse-bay<backslash><quote><comma><space><backslash><quote>name<backslash><quote>:<space><backslash><quote>$(Nazwa_pliku_mapBox$encode)<backslash><quote><closecurly><quote><space>https:<solidus><solidus>api.mapbox.com<solidus>uploads<solidus>v1<solidus>szymonagh?access_token=sk.eyJ1Ijoic3p5bW9uYWdoIiwiYSI6ImNsZDUydjJxMTAxYTEzdXFocm9hOThwbnQifQ.G9G6P6qH8u6_0jNKeKmKrw" }    OUTPUT { OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME { SystemCaller }    INPUT  FEATURE_TYPE AttributeCreator_OUTPUT    OUTPUT { FEATURE_TYPE SystemCaller_OUTPUT         @System(LOG_PREFIX,SystemCaller,ENCODED,"@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>send<closeparen>,SystemCaller)")          }
+# -------------------------------------------------------------------------
+# Assumption is that the workspace temp dir has been already set and created.  See controldefs.cpp - ControlDefs::writeVisualizerTempDir
+DEFAULT_MACRO WORKSPACE_TEMP_DIR
+INCLUDE [    set safeName "[regsub -all {[^a-zA-Z0-9]} {Inspector} _]_[expr round(rand() * 1000000)]_[clock clicks  -milliseconds]";    puts "MACRO SAFE_FFS_NAME $safeName"; ]
+FACTORY_DEF {*} InspectorFactory    FACTORY_NAME { Inspector_Prepper }    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE SystemCaller_OUTPUT    GROUP_ATTRIBUTE __inspector_feature_type_attr__    GROUP_ATTRIBUTE_PREFIX { Inspector }    RASTER_REDUCTION { NoReduction }    POINT_CLOUD_REDUCTION { NO_THINNING }    OUTPUT { RESULT FEATURE_TYPE __viewme__    }
+# Now route all the features into the recorder, changing their
+# feature type to the transformer name so that they view nicely
+DEFAULT_MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/$(SAFE_FFS_NAME).ffs
+DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
+# [PR#45549] The Data Inspector will limit the maximum number of features
+# it reads on WIN32, so we will correspondingly limit the number of
+# features we record here using the MAX_FEATURES_TO_RECORD directive.
+FACTORY_DEF {*} RecorderFactory    FACTORY_NAME { Inspector_Recorder }    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT FEATURE_TYPE __viewme__       _wb_termination_feature Yes       @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__       @FeatureType(@Value(__inspector_feature_type_attr__))       @RemoveAttributes(__inspector_feature_type_attr__)    FEATURE_FILE { "$(VISUALIZER_FEATURE_FILE)" }    STORE_SCANNED_SCHEMA YES    NORMALIZE_LIST_ATTRIBUTES_ON_SCHEMA YES    CREATE_SPATIAL_INDEX { "$(VISUALIZER_CREATE_SPATIAL_INDEX)" }    INSPECTOR { "$(VISUALIZER_CREATE_SPATIAL_INDEX)" }    FSC_SCHEMA { send,varchar<openparen>200<closeparen>,_creation_instance,uint64,_response_body,buffer,_http_status_code,buffer }    MODE RECORD    STORE_SCANNED_METADATA    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO FME_LAUNCH_VIEWER_APP NO
+FACTORY_DEF * CreationFactory    FACTORY_NAME VisualizerProcessor   CREATE_AT_END   OUTPUT FEATURE_TYPE __NUKEME__   @TCL("if {{$(FME_LAUNCH_VIEWER_APP)} == {YES}} {  if [file exists {$(WORKSPACE_TEMP_DIR)}] {set files [glob -nocomplain -directory  {$(WORKSPACE_TEMP_DIR)} -tails *.ffs];   if {[llength $files] == 1} {    set theFile {$(WORKSPACE_TEMP_DIR)/};   append theFile [lindex $files 0];   eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -f FFS \042$theFile\042 & \175;  } elseif { [llength $files] == 0 } {  catch { file delete -force {$(WORKSPACE_TEMP_DIR)} };  } else {  set filesNoExt {}; set lastfile {}; foreach {fileName} [lsort $files] { set fileNoExt [string trimright $fileName {.ffs}]; if [regexp {(.*)_[0-9]*$} $fileNoExt wholething fileNoExtBase] {  if { $fileNoExtBase == $lastfile } { continue } }; set lastfile $fileNoExt; lappend filesNoExt $fileNoExt };  eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -d {$(WORKSPACE_TEMP_DIR)} -a ffs -f FFS $filesNoExt & \175; }; }; }; ")
+FACTORY_DEF * TeeFactory    FACTORY_NAME VisualizerCleaner   INPUT FEATURE_TYPE __NUKEME__
